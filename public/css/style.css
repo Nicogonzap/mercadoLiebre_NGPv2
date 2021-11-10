@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259c3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #ebebeb;
+    --color-verde: #39b54a;
+
+}
+header {
+    background-color: var(--color-amarillo);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;;
+    background-color: var(--color-gris-claro);
+}
+/* Logo de MeLi + barra de búsqueda*/
+.logo-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo-busqueda img {
+    flex-grow: 50%;
+}
+.busqueda {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 50%;
+    
+}
+.search-icon {
+    background-color: white;
+    padding:0.1rem;
+    border: solid black 0.1rem;
+    border-radius: 0.25rem;
+}
+
+#buscador {
+    align-items: center;
+}
+.promocion-tarjeta {
+    text-align: center;
+}
+
+.titular {
+    font-size: 1.5rem;
+    color: grey;
+    text-align: start;
+}
+p {
+    font-size: 0.75rem;
+    margin-bottom: 0px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*Acomoda los ul para que queden alineados a los bordes (Code review clase 14) */
+
+}
+    .nav-site {
+        padding-left: 1rem;
+
+    }
+    .nav-login-navbar {
+        padding-right: 1rem;
+    }
+    header nav ul {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+    }
+
+/* Menu hamburguesa*/
+.burger-menu{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.burger-menu i {
+    color: white;
+    background-color: var(--color-celeste);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+
+/*--------- Sección del body--------------*/
+/*Estructura del body:
+Banner
+products-group = Secciones con múltiples cajas con productos
+    h3 = título de la sección
+    product-boxes = Cada caja de producto
+        product-boxes-article = sección interna de la caja (sin borde)
+            foto-entrega = img = imagen del producto
+            detalle-de-producto = Todo lo que está debajo de la imagen
+                i = camioncito verde
+                valores = Precio + Descuento
+                    precio
+                    descuento
+                descripciones = descripción del producto
+*/
+
+.banner {
+    width: 100%;
+}
+
+.products-group {
+    padding: 10px, 0px, 0px, 10px;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+    .product-boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+        .product-boxes article {
+            margin-bottom: 10px;
+            border: 1px black solid;
+            width: 18.75rem;
+        }
+            .product-boxes article img {
+                width:100%;
+            }
+            .detalles-de-producto {
+                text-align: left;
+                background-color: white;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+
+                .detalles-de-producto i { 
+                    /*Camion verde (camioncito)*/  
+                    border: solid 1px var(--color-verde);
+                    color: var(--color-verde);
+                    border-radius: 100%;
+                    margin: 1px;
+                    padding: 6px;
+                    position: absolute;
+                    background-color: white;
+                    top: -17px;
+                    right: 7%;
+                    transition: all 1s;
+                    
+                }
+                .valores {
+                    display: flex;
+                    width: 50%;
+                    align-items: flex-end;
+                }
+                    .descuentos {
+                        color: var(--color-verde);
+                        font-size: 1rem;
+                        flex-grow: 0.7;
+                    }
+                    .precio {
+                        font-size: 1.125rem;
+                        flex-grow: 0.3;
+                        padding-left: 10px;
+                    }
+                .descripciones {
+                    font-size: 1rem;
+                    padding-bottom: 6px;
+                    color: grey;
+                    padding-left: 10px;
+                    visibility: hidden;
+                }
+
+/*------Sección del Footer ------*/
+.footer-note {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-note i {
+    color: var(--color-celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
+    padding-top: 3rem;
+}
+
+.titular-footer {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+/*------Sección de animaciones ------*/
+article:hover {
+    box-shadow : 0px 0px 10px rgb(100,100,100);
+}
+    article:hover .descripciones {
+        visibility: visible;
+        
+    }
+
+.detalles-de-producto i:hover {
+        transform: rotate(-90deg);
+    
+}
+
+.send-login-form:hover {
+    background-color: #0022AA;
+    color:white;
+}
+
+
+/*------Sección de Media Queries ------*/
+@media (max-width: 767px) {
+    .descripciones {
+        display:none;
+    }
+    header nav {
+        /*Microdesafío Clase 13 --> Solo para la versión mobile, ocultar el site y el login navbar.*/
+        display:none;
+    };
+}
+@media (min-width:768px) {
+    /*Microdesafío Clase 13 --> Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa..*/
+    .burger-menu{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .products-group article {
+        box-shadow : 0px 0px 10px rgb(100,100,100);
+    }
+}
+@media (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-note {
+        width: 30%;
+    }
+    .copyright {
+        padding: 1rem 0rem;
+        
+    }
+
+}
+/*
+@media (min-width: 769px) {
+    .footer-note {
+        display: inline-block;
+        width: 100%;
+    }
+}
+*/
