@@ -10,16 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
     <title>Mockup MercadoLiebre</title>
 </head>
 <body>
     <header>
         <div class = "logo-busqueda">
             <img src="img/logo-mercado-liebre.svg" alt="Logo de Meli" style="width:18.75rem;height:6.25rem;">
-            <div class = "busqueda">
-                <input id= "buscador" type="text" aria-label="Ingresá lo que quieras encontrar" name="as_word" placeholder="Buscar productos, marcas y más…">
-                <span class = "search-icon"><i class="fas fa-search"></i></span>
-            </div>
+            <div class="search-form">
+                <form action="#" method="GET">
+                   <input type="text" name="search" placeholder="Buscar productos, marcas y más...">
+                   <i class="fa fa-search"></i>
+                 </form>
+           </div>
         </div>
         <div class ="promocion-tarjeta">
             <i class="fas fa-hand-holding-usd"></i>
@@ -60,10 +63,17 @@
                 <i class="fas fa-bars"></i>
             </div>
     </header>
-    <form action="/" class="login-form">
-        <input type="text" class="user" name="user" placeholder="Nombre de Usuario">
-        <input type="password" class="pass" name="pass" placeholder="Ingrese su contraseña">
-        <button class = "send-login-form" type="submit">Enviar</button>
-
-    </form>
+    <main class="registro">
+        <form action="/" method="POST">
+            <h4>Ingrese sus datos de cuenta</h4>
+            <div class="ingreso-datos-personales">
+                <input type="text" name="user" placeholder="Ingresá tu mail o usuario">
+                <input type="password" name="pass" placeholder="Ingresá tu contraseña">
+            </div>
+            <div class="botones-form">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </main>
 </body>

@@ -30,22 +30,40 @@ body{
 .logo-busqueda img {
     flex-grow: 50%;
 }
-.busqueda {
+.search-form {
     display: flex;
-    align-items: flex-end;
-    flex-grow: 50%;
-    
-}
-.search-icon {
-    background-color: white;
-    padding:0.1rem;
-    border: solid black 0.1rem;
-    border-radius: 0.25rem;
-}
-
-#buscador {
     align-items: center;
 }
+
+    .search-form form{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+        .search-form input {
+            border-top: 1px solid rgb(207, 206, 206);
+            border-left: 1px solid rgb(207, 206, 206);
+            border-bottom: 1px solid rgb(207, 206, 206);
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+        }
+
+        .search-form i {
+            border-top: 1px solid rgb(207, 206, 206);
+            border-right: 1px solid rgb(207, 206, 206);
+            border-bottom: 1px solid rgb(207, 206, 206);
+            border-left: none;
+            border-radius: 0 8px 8px 0;
+            padding: 10px;
+            background-color: white;
+            color: rgb(177, 174, 174);
+        }
+
 .promocion-tarjeta {
     text-align: center;
 }

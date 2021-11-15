@@ -1,0 +1,74 @@
+:root{
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259c3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #ebebeb;
+    --color-verde: #39b54a;
+
+}
+.registro form {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30%;
+    margin-right: 30%;
+    align-items: center;
+    border: var(--color-gris-oscuro) 1px solid;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.registro form h4 {
+    align-self: flex-start;
+    padding-left: 10%;
+}
+    .ingreso-datos-personales {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+    }
+        .ingreso-datos-personales input {
+            margin-bottom: 5px;
+            border: 1px solid rgb(207, 206, 206);
+            border-radius: 8px;
+            padding: 10px;
+            background-color: white;
+            color: rgb(177, 174, 174);
+            
+        }
+        .ingreso-datos-personales label {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    .profile {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+    }
+        .profile-comprador {
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    .interests {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+    }
+        .grupo-intereses {
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+        }
+        .grupo-intereses div {
+            padding-top: 1rem;
+        }
+    .botones-form {
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+        padding-top: 2rem;
+    }
