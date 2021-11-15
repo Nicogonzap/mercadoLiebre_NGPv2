@@ -274,7 +274,11 @@ article:hover {
         width: 30%;
     }
     .copyright {
-        padding: 1rem 0rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        text-align: start;
+        width: 100%;
         
     }
 
